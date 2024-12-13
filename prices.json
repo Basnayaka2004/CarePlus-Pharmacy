@@ -1,0 +1,41 @@
+{
+    "Analgesics": {
+      "Paracetamol": 5,
+      "Acetaminophen (Tylenol)": 8,
+      "Aspirin": 6,
+      "Naproxen": 10,
+      "Oxaprozin": 12,
+      "Diclofenac": 9
+    },
+    "Antibiotics": {
+      "Amoxicillin": 7,
+      "Penicillin": 8,
+      "Cephalexin": 10,
+      "Clindamycin": 12,
+      "Flucloxacillin": 9,
+      "Phenoxymethylpenicillin": 11
+    },
+    "Antidepressants": {
+      "Citalopram (Celexa)": 15,
+      "Sertraline (Zoloft)": 14,
+      "Nortriptyline (Aventyl HCI)": 13,
+      "Paroxetine (Paxil)": 16,
+      "Bupropion (Aplenzin)": 18,
+      "Fluoxetine (Prozac)": 17
+    },
+    "Antihistamines": {
+      "Diphenhydramine": 5,
+      "Loratadine": 6,
+      "Chlorpheniramine": 7,
+      "Fexofenadine": 8
+    },
+    "Antihypertensives": {
+      "Acebutolol": 10,
+      "Chlorothiazide": 11,
+      "Ramipril": 12,
+      "Betaxolol": 13,
+      "Captopril": 14,
+      "Fosinopril": 15
+    }
+  }
+  

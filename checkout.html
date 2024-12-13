@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Care Plus</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./checkout.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <header id="header">
+        <a href="./home.html">
+        <section id="logo">
+            <img src="./images/logo.jpg">
+        </section>
+        </a>
+        <nav>
+            <ul class="sidebar">
+            
+                <li onclick=hidesidebar()><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li>
+                <a href="./home.html" class="menu-item">Home</a>
+                <a href="./about.html" class="menu-item">About us</a>
+                <a href="./service.html" class="menu-item">Services</a>
+                <a href="./doctors.html" class="menu-item">Doctors</a>
+                <a href="./consulting.html" class="menu-item">Consulting Reservation</a>
+                <a href="./index.html" class="menu-item">Order</a>
+                <a href="./checkout.html" class="menu-item active">Checkout</a>
+                <a href="./contact.html" class="menu-item">Contact us</a>
+                
+            </ul>
+            <ul>
+            
+                <a href="./home.html" class="menu-item hideOnMobile">Home</a>
+                <a href="./about.html" class="menu-item hideOnMobile">About us</a>
+                <a href="./service.html" class="menu-item hideOnMobile">Services</a>
+                <a href="./doctors.html" class="menu-item hideOnMobile">Doctors</a>
+                <a href="./consulting.html" class="menu-item hideOnMobile">Consulting Reservation</a>
+                <a href="./index.html" class="menu-item hideOnMobile">Order</a>
+                <a href="./checkout.html" class="menu-item  hideOnMobile active">Checkout</a>
+                <a href="./contact.html" class="menu-item hideOnMobile">Contact us</a>
+                <section class="menu">
+                <li class="menu-button" onclick=showsidebar()><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="35px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+                </section>
+            </ul>
+            <script>
+                function showsidebar(){
+                    const sidebar=document.querySelector('.sidebar')
+                    sidebar.style.display='flex'
+                }
+                function hidesidebar(){
+                    const sidebar=document.querySelector('.sidebar')
+                    sidebar.style.display='none'
+                }
+            </script>
+        </nav>
+    </header>
+    <main>
+        <section id="order-summary">
+        <h2>Order Summary</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Medicine</th>
+              <th>Quantity</th>
+              <th>Unit Price</th>
+              <th>Subtotal</th>
+            </tr>
+          </thead>
+          <tbody id="summary-items">
+            <!-- Items will be dynamically populated -->
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">Total</td>
+              <td id="total-price">$0</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+  
+      <!-- Checkout Form Section -->
+      <section id="checkout-form">
+        <h2>Enter Your Details</h2>
+        <form id="checkout">
+          <!-- Personal Details -->
+          <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+  
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+  
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+          </fieldset>
+  
+          <!-- Delivery Details -->
+          <fieldset>
+            <legend>Delivery Information</legend>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+  
+            <label for="zip">ZIP Code:</label>
+            <input type="text" id="zip" name="zip" required>
+          </fieldset>
+  
+          <!-- Payment Information -->
+          <fieldset>
+            <legend>Payment Information</legend>
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" name="card-number" maxlength="16" required>
+  
+            <label for="expiry">Expiry Date:</label>
+            <input type="month" id="expiry" name="expiry" required>
+  
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" maxlength="3" required>
+          </fieldset>
+  
+          <button type="submit" id="pay-button">Pay</button>
+        </form>
+        <p>Thank you for shopping with us!</p>
+      </section>
+    </main>
+  
+    <footer class="footer">
+      <div class="footer-content">
+        
+        <!-- Contact Section -->
+        <div class="contact">
+            <h4>Contact Us</h4>
+            <p>Email: <a href="mailto:info@careplus.com">info@careplus.com</a></p>
+            <p>Phone: <a href="tel:+9481234598">+94 812 345 98</a></p>
+            <p>Address: Care Plus Hospital, Peradeniya Road, Kandy</p>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="./home.html" class="menu-item">Home</a></li>
+                <li><a href="./about.html" class="menu-item">About Us</a></li>
+                <li><a href="./service.html" class="menu-item">Services</a></li>
+                <li><a href="./doctors.html" class="menu-item">Doctors</a></li>
+                <li><a href="./consulting.html" class="menu-item">Consulting Reservation</a></li>
+                <li><a href="./index.html" class="menu-item">Order</a></li>
+                <li><a href="./checkout.html" class="menu-item active">Checkout</a></li>
+                <li><a href="./contact.html" class="menu-item">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="social">
+            <h4>Follow Us</h4>
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                <img src="./images/fbicon.jpg" alt="Facebook Icon">
+            </a>
+            <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+                <img src="./images/youtubeicon.jpg" alt="YouTube Icon">
+            </a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                <img src="./images/instericon.jpg" alt="Instagram Icon">
+            </a>
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                <img src="./images/twitericon.jpg" alt="Twitter Icon">
+            </a>
+        </div>
+
+    </div>
+
+            <p>&copy;2024 Care Plus Hospital(PVT)Ltd.All Rights Reserved</p>
+        
+        </footer>
+    </footer>
+  <script src="./order.js"></script>
+    <script src="./checkout.js"></script>
+  </body>
+  </html>
